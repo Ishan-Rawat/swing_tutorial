@@ -41,13 +41,14 @@ public class Main {
 		label.setVerticalAlignment(JLabel.CENTER);
 		label.setHorizontalAlignment(JLabel.CENTER);
 		
+		label.setBounds(0, 0, 350, 350); //This sets the position and size of the label
 		JFrame frame = new JFrame();
 		frame.setSize(500, 500);
 		frame.setVisible(true);
 		frame.add(label);
 		//by default it will centre the string and put it on the left side. This is done by the default layout manager.
-		//Using the default manager, we can use the pack() method to automatically set a size for the frame so that it accomodates all the components and not leave any extra spaces.
-		frame.pack();
+		//We can also set the layout to null, but then we have to define the window size and the size and position of the label manually.
+		frame.setLayout(null);
 		
 	}
 }
