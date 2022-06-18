@@ -27,6 +27,18 @@ public class SliderDemo implements ChangeListener{
 		
 		// slider.setOrientation(SwingConstants.VERTICAL); //to make the slider vertical
 		
+		/*
+		 * If we keep this label here then we won't be able to reflect the changes in real-time
+		 * So we have to put it in the stateChanged method
+		 * But, that isn't enough, we need something to trigger the stateChanged method
+		 * So we have to add a changeListener to our slider
+		 *  
+		 * label.setText("Degree C: " + slider.getValue()); // using this label to reflect the value set on the slider
+		 *label.setFont(new Font("Helvitica", Font.PLAIN, 25));
+		 */
+		
+		slider.addChangeListener(this);
+		
 		panel.add(slider);
 		panel.add(label);
 		frame.add(panel);
@@ -35,6 +47,7 @@ public class SliderDemo implements ChangeListener{
 	}
 	
 	public void stateChanged(ChangeEvent e) {
-		
+		label.setText("Degree C: " + slider.getValue()); // using this label to reflect the value set on the slider
+		label.setFont(new Font("Helvitica", Font.PLAIN, 25));
 	}
 }
