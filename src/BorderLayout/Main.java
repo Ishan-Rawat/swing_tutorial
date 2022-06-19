@@ -34,6 +34,35 @@ public class Main {
 		panel4.setPreferredSize(new Dimension(100,100));
 		panel5.setPreferredSize(new Dimension(100,100)); // CENTER so it will expand/contract on all sides according to the size of the frame
 		
+		// ----------------------------SUB PANELS------------------------------------
+		JPanel panel6 = new JPanel();
+		JPanel panel7 = new JPanel();
+		JPanel panel8 = new JPanel();
+		JPanel panel9 = new JPanel();
+		JPanel panel10 = new JPanel();
+		
+		panel6.setBackground(Color.black);
+		panel7.setBackground(Color.darkGray);
+		panel8.setBackground(Color.gray);
+		panel9.setBackground(Color.lightGray);
+		panel10.setBackground(Color.white);
+		
+		panel5.setLayout(new BorderLayout());
+		
+		panel1.setPreferredSize(new Dimension(50,50)); //attached to north so height will remain as specified but width will change according to the frame's dimensions
+		panel2.setPreferredSize(new Dimension(50,50)); //WEST so width will remain as specified but height will change according to seize of the frame 
+		panel3.setPreferredSize(new Dimension(50,50));
+		panel4.setPreferredSize(new Dimension(50,50));
+		panel5.setPreferredSize(new Dimension(50,50));
+		
+		panel5.add(panel6, BorderLayout.NORTH);
+		panel5.add(panel7, BorderLayout.WEST);
+		panel5.add(panel8, BorderLayout.EAST);
+		panel5.add(panel9, BorderLayout.SOUTH);
+		panel5.add(panel10, BorderLayout.CENTER);
+		
+		//-------------------------------SUB PANELS---------------------------------------
+		
 		//Then when adding the panels to the frame we gotta specify if it is to be aligned to the NORTH, SOUTH, EAST, WEST, CENTER
 		frame.add(panel1, BorderLayout.NORTH);
 		frame.add(panel2, BorderLayout.WEST);
