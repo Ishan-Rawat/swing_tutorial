@@ -12,7 +12,8 @@ public class Main {
 		JFrame frame = new JFrame();
 		frame.setSize(500, 500);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setLayout(new BorderLayout()); // gotta write this to use BorderLayout. What does the constructor return though?
+		frame.setLayout(new BorderLayout(10,10)); // gotta write this to use BorderLayout. What does the constructor return though?
+		// The args in the constructor specify 10 pixels of margin on left right and top bottom respectively.
 		frame.setVisible(true);
 		
 		JPanel panel1 = new JPanel();
